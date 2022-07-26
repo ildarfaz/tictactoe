@@ -1,4 +1,8 @@
 .board {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
 }

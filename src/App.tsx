@@ -1,11 +1,11 @@
 import React from 'react';
-import { Game } from 'components/wrapper/game/Game';
 import './App.css';
+import { Wrapper } from 'components/wrapper/Wrapper';
 
 export function App() {
   return (
     <div className="App">
-      <Game />
+      <Wrapper />
     </div>
   );
 }
