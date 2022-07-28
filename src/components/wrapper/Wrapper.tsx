@@ -8,7 +8,7 @@ export const Wrapper = () => {
         setIsPlay(true);
     }
     const onClose = () => {
-        window.close();
+        
     }
     return (
         <div className={style.wrapper}>
