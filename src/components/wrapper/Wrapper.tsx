@@ -7,16 +7,12 @@ export const Wrapper = () => {
     const onPlay = () => {
         setIsPlay(true);
     }
-    const onClose = () => {
-        
-    }
     return (
         <div className={style.wrapper}>
             {!isPlay && <div>
                 Хочешь сыграть?
-                <div>
+                <div className={style.button}>
                     <button onClick={() => onPlay()}>Да</button>
-                    <button onClick={() => onClose()}>Нет</button>
                 </div>
             </div>}
             {isPlay && <Game />}

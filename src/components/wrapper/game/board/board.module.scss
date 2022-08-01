@@ -1,6 +1,8 @@
 .board {
   display: flex;
   flex-wrap: wrap;
+  width: 106px;
+  height: 106px;
   .break {
     flex-basis: 100%;
     height: 0;

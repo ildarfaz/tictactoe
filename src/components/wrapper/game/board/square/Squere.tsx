@@ -7,7 +7,8 @@ interface squereProps {
 }
 
 export const Squere: React.FC<squereProps> = ({ value, index, onChangeSquare }) => {
+
     return (
-        <div className={style.square} onClick={() => onChangeSquare(index)} >{value || ""} </div>
+        <div className={style.square} onClick={() => !value && onChangeSquare(index)} >{value || ""} </div>
     )
 }
