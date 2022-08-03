@@ -19,6 +19,7 @@ interface GameState {
     story: any[],
     isBackStory: boolean,
     numberStory: number,
+    isWinner: boolean
 }
 export const Game = () => {
     const initialState = {
@@ -28,6 +29,7 @@ export const Game = () => {
         story: [Array(9).fill(null)],
         isBackStory: false,
         numberStory: 0,
+        isWinner: false
     };
 
     const reducer = (state: GameState, action: Action) => {
@@ -36,7 +38,7 @@ export const Game = () => {
                 return {
                     ...state,
                     player: state.player === 'X' ? 'O' : 'X',
-                    squares: state.squares.map((el, index) => index === action.payload.num && !el ? state.player : el),
+                    squares: state.squares.map((el, index) => index === action.payload.num  ? state.player : el),
                     steps: [...state.steps, action.payload.num],
                 };
             case ActionTypes.ADD_STORY:
