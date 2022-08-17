@@ -38,7 +38,7 @@ export const Game = () => {
                 return {
                     ...state,
                     player: state.player === 'X' ? 'O' : 'X',
-                    squares: state.squares.map((el, index) => index === action.payload.num  ? state.player : el),
+                    squares: state.squares.map((el, index) => index === action.payload.num ? state.player : el),
                     steps: [...state.steps, action.payload.num],
                 };
             case ActionTypes.ADD_STORY:
